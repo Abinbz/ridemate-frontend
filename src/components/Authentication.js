@@ -67,7 +67,7 @@ function Authentication() {
     e.preventDefault();
     setError('');
 
-    const apiUrl = authMode === 'userSignup' ? 'signup' : (authMode === 'userLogin' ? 'login' : 'admin-login');
+    const apiUrl = authMode === 'userSignup' ? 'signup' : (authMode === 'userLogin' ? 'login' : 'admin');
     const isSignup = authMode === 'userSignup';
 
     if (isSignup) {

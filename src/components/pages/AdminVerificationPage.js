@@ -28,7 +28,9 @@ const AdminVerificationPage = () => {
         try {
             const endpoint = action === 'approve' ? 'verify' : 'reject';
             const response = await fetch(`${API_BASE_URL}/api/admin/${endpoint}/${userId}`, {
-                method: 'POST'
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({})
             });
             const data = await response.json();
             if (data.success) {

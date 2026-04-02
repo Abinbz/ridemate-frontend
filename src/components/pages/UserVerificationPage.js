@@ -62,7 +62,7 @@ const UserVerificationPage = () => {
         formData.append('insurance', files.insurance);
 
         try {
-            const response = await fetch(`${API_BASE_URL}/api/upload-documents`, {
+            const response = await fetch(`${API_BASE_URL}/api/user/upload-docs`, {
                 method: 'POST',
                 body: formData,
             });
